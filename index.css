@@ -438,3 +438,255 @@ button {
 .animate-spin {
   animation: spin 1s linear infinite;
 }
+
+/* ================================
+   ELDERLY-FRIENDLY ADDITIONS
+   ================================ */
+
+/* Login Page */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 50%, #3b82f6 100%);
+  padding: 2rem;
+}
+
+.login-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  width: 100%;
+  max-width: 460px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  animation: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.login-card .form-control {
+  font-size: 1.1rem;
+  padding: 1rem 1.25rem;
+}
+
+.login-card .form-label {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.login-card .btn {
+  font-size: 1.15rem;
+  padding: 1rem 2rem;
+}
+
+/* QR Scanner */
+.scanner-viewfinder {
+  background-color: #1e293b;
+  border: 3px dashed var(--border-color);
+  border-radius: var(--radius-md);
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  gap: 1rem;
+  transition: border-color 0.3s;
+  cursor: pointer;
+}
+
+.scanner-viewfinder:hover {
+  border-color: var(--accent-primary);
+}
+
+.scanner-viewfinder .scan-icon {
+  font-size: 4rem;
+}
+
+.scan-result-card {
+  border-left: 5px solid var(--accent-primary);
+  animation: slideUp 0.3s ease-out;
+}
+
+/* LINE Chat Preview */
+.line-chat {
+  background-color: #7BBEE3;
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: auto;
+}
+
+.line-chat-header {
+  background-color: #4A8DB7;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.line-bubble {
+  background-color: white;
+  border-radius: 0 16px 16px 16px;
+  padding: 1rem 1.25rem;
+  max-width: 85%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  white-space: pre-line;
+  position: relative;
+}
+
+.line-bubble.alert-bubble {
+  border-left: 4px solid var(--status-danger);
+  background-color: #FFF5F5;
+}
+
+.line-bubble.warning-bubble {
+  border-left: 4px solid var(--status-warning);
+  background-color: #FFFBEB;
+}
+
+.line-bubble-time {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.7);
+  margin-top: 0.25rem;
+}
+
+/* Ward Selector */
+.ward-selector {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.ward-card {
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--border-color);
+  background: var(--bg-secondary);
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.ward-card:hover {
+  border-color: var(--accent-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.ward-card.active {
+  border-color: var(--accent-primary);
+  background-color: var(--accent-light);
+  color: var(--accent-primary);
+  box-shadow: var(--shadow-glow);
+}
+
+/* Transfer Status Tabs */
+.status-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.status-tab {
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-full);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  transition: all 0.2s;
+}
+
+.status-tab:hover {
+  background: var(--bg-tertiary);
+}
+
+.status-tab.active {
+  background: var(--accent-primary);
+  color: white;
+  border-color: var(--accent-primary);
+}
+
+/* Expiry Timeline */
+.expiry-section {
+  margin-bottom: 2rem;
+}
+
+.expiry-section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.expiry-card {
+  border-left: 5px solid var(--border-color);
+  padding: 1.25rem 1.5rem;
+  background: var(--bg-secondary);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s;
+}
+
+.expiry-card:hover {
+  transform: translateX(4px);
+}
+
+.expiry-card.expired { border-left-color: var(--status-danger); }
+.expiry-card.urgent { border-left-color: var(--status-warning); }
+.expiry-card.soon { border-left-color: #eab308; }
+.expiry-card.safe { border-left-color: var(--status-success); }
+
+.days-remaining {
+  font-size: 2rem;
+  font-weight: 800;
+  min-width: 80px;
+  text-align: center;
+}
+
+/* Audit Log */
+.audit-badge {
+  font-size: 0.8rem;
+}
+
+.audit-badge.login { background-color: var(--accent-light); color: var(--accent-primary); }
+.audit-badge.requisition { background-color: rgba(139, 92, 246, 0.1); color: #7c3aed; }
+.audit-badge.stock-cut { background-color: var(--status-danger-bg); color: var(--status-danger); }
+.audit-badge.edit { background-color: var(--status-warning-bg); color: var(--status-warning); }
+.audit-badge.alert-log { background-color: rgba(236, 72, 153, 0.1); color: #db2777; }
+.audit-badge.approve { background-color: var(--status-success-bg); color: var(--status-success); }
+
+/* Data Isolation Notice */
+.data-notice {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(37, 99, 235, 0.1));
+  border: 1px dashed var(--accent-primary);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.5rem;
+  font-size: 0.9rem;
+  color: var(--accent-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
