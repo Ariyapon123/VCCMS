@@ -12,11 +12,11 @@ import { useToast } from '../components/ToastContext';
 
 // Mock Data
 export const mockLots = [
-  { id: 'LOT-2026-001', vaccine: 'Pfizer-BioNTech COVID-19', manufacturer: 'Pfizer', temp: 3.5, requiredTemp: '2°C to 8°C', qty: 5000, status: 'Normal', statusType: 'success', mfgDate: '2026-01-15', expDate: '2026-12-15' },
-  { id: 'LOT-2026-002', vaccine: 'Moderna COVID-19', manufacturer: 'Moderna', temp: -18.2, requiredTemp: '-25°C to -15°C', qty: 3200, status: 'Normal', statusType: 'success', mfgDate: '2026-02-10', expDate: '2026-11-10' },
-  { id: 'LOT-2026-003', vaccine: 'AstraZeneca COVID-19', manufacturer: 'AstraZeneca', temp: 9.1, requiredTemp: '2°C to 8°C', qty: 4000, status: 'Warning', statusType: 'warning', mfgDate: '2026-03-05', expDate: '2027-03-05' },
-  { id: 'LOT-2026-004', vaccine: 'Sinovac COVID-19', manufacturer: 'Sinovac', temp: 5.0, requiredTemp: '2°C to 8°C', qty: 2500, status: 'Normal', statusType: 'success', mfgDate: '2025-12-20', expDate: '2026-12-20' },
-  { id: 'LOT-2026-005', vaccine: 'Fluarix Influenza', manufacturer: 'GSK', temp: 12.3, requiredTemp: '2°C to 8°C', qty: 1200, status: 'Critical', statusType: 'danger', mfgDate: '2026-05-01', expDate: '2027-05-01' }
+  { id: 'LOT-2569-001', vaccine: 'BCG vaccine EPI 0-5 ปี', manufacturer: 'องค์การเภสัชกรรม', temp: 4.5, requiredTemp: '2 ถึง 8 °C', qty: 31, status: 'ปกติ', statusType: 'success', mfgDate: '2025-01-15', expDate: '2026-12-15' },
+  { id: 'LOT-2569-002', vaccine: 'bOPV vaccine EPI 0-5 ปี', manufacturer: 'องค์การเภสัชกรรม', temp: -18.2, requiredTemp: '-15 ถึง -25 °C', qty: 42, status: 'ปกติ', statusType: 'success', mfgDate: '2025-02-10', expDate: '2026-11-10' },
+  { id: 'LOT-2569-003', vaccine: 'DTP-HB-Hib vaccine EPI 0-5 ปี', manufacturer: 'Serum Institute', temp: 9.1, requiredTemp: '2 ถึง 8 °C', qty: 14, status: 'เฝ้าระวัง', statusType: 'warning', mfgDate: '2026-03-05', expDate: '2027-03-05' },
+  { id: 'LOT-2569-004', vaccine: 'Influ vaccine ญ.ตั้งครรภ์', manufacturer: 'Sanofi', temp: 5.0, requiredTemp: '2 ถึง 8 °C', qty: 35, status: 'ปกติ', statusType: 'success', mfgDate: '2025-12-20', expDate: '2026-12-20' },
+  { id: 'LOT-2569-005', vaccine: 'Rabies vaccine (PCEC)', manufacturer: 'Chiron', temp: 12.3, requiredTemp: '2 ถึง 8 °C', qty: 100, status: 'วิกฤต', statusType: 'danger', mfgDate: '2026-05-01', expDate: '2027-05-01' }
 ];
 
 const Dashboard: React.FC = () => {
